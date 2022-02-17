@@ -1,0 +1,163 @@
+.dday {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    line-height: 0;
+    text-align: right;
+}
+
+
+/* 후보별 공약 메인 */
+
+.select-candidate-container-mb {
+    display: none;
+}
+
+.select-candidate-container {
+    padding-left: 20px;
+    display: flex;
+}
+
+.select-candidate-container .candidate-card {
+    cursor: pointer;
+    height: 70vh;
+    width: 25%;
+    margin-right: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    position: relative;
+    line-height: 10px;
+    padding: 10px 20px;
+}
+
+.candidate-card:hover {
+    transform: scale(1.01);
+}
+
+.candidate-card .number {
+    font-family: 'SBAggroB';
+}
+
+.candidate-card.minjoo {
+    background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_leejm_mo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #519be1;
+    color: white;
+}
+
+.candidate-card.peoplepower {
+    background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_yoonsy_mo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(230, 30, 43);
+    color: white;
+}
+
+.candidate-card.people {
+    background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_ancs_mo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #519be1;
+    color: white;
+}
+
+.candidate-card.justice {
+    background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_simsj_mo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(230, 30, 43);
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .select-candidate-container-mb {
+        display: block;
+        padding-top: 20px;
+        margin-left: -10px;
+        padding-right: -10px;
+        width: 100vw;
+    }
+    .select-candidate-container-mb .candidate-card {
+        height: 120px;
+        width: 80%;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .candidate-card:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .4);
+        border-radius: 5px;
+        z-index: 0;
+        transition: all 0.3s ease-in;
+    }
+    .candidate-card:hover {
+        transform: scale(1.01);
+    }
+    .select-candidate-container-mb .candidate-card * {
+        display: inline-block;
+    }
+    .candidate-card .number {
+        position: relative;
+        font-size: 40px;
+        height: 40px;
+        padding: 20px;
+        z-index: 1;
+    }
+    .candidate-card .name {
+        position: relative;
+        z-index: 1;
+    }
+    .candidate-card .party {
+        position: relative;
+        font-size: 12px;
+        bottom: 25px;
+        left: -60px;
+    }
+    .candidate-card.minjoo {
+        background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_leejm_mo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-color: #519be1;
+        color: white;
+        border-radius: 0 5px 5px 0;
+    }
+    .candidate-card.peoplepower {
+        background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_yoonsy_mo.jpg');
+        background-size: cover;
+        background-position: left;
+        background-color: rgb(230, 30, 43);
+        margin-right: -2px;
+        float: right;
+        color: white;
+        border-radius: 5px 0 0 5px;
+    }
+    .candidate-card.people {
+        background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_ancs_mo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-color: #519be1;
+        margin-right: -2px;
+        float: right;
+        color: white;
+        border-radius: 0 5px 5px 0;
+    }
+    .candidate-card.justice {
+        background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_simsj_mo.jpg');
+        background-size: cover;
+        background-position: left;
+        background-color: rgb(230, 30, 43);
+        margin-right: -2px;
+        float: left;
+        color: white;
+        border-radius: 5px 0 0 5px;
+    }
+    .select-candidate-container {
+        display: none;
+    }
+}

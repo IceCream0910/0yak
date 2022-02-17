@@ -1,0 +1,85 @@
+.profile-image {
+    position: fixed;
+    width: 30%;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+@media (max-width: 767px) {
+    .profile-image {
+        top: 20px;
+        right: -60px;
+        width: 50%;
+    }
+}
+
+.prof_table tr {
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.prof_table td {
+    vertical-align: top;
+    font-weight: lighter;
+    color: rgb(126, 126, 126);
+    font-size: 0.9em;
+    border-bottom: rgb(218, 218, 218) 0.1px solid;
+}
+
+.prof_table td:first-child {
+    font-weight: bold;
+    color: rgb(58, 58, 58);
+    font-size: 1em;
+}
+
+#ten-promise h3 {
+    margin-bottom: 30px;
+}
+
+#ten-promise {
+    line-height: 1;
+}
+
+.chip {
+    padding: 0 12px;
+    background-color: rgb(201, 201, 201);
+    border-radius: 100px;
+    display: inline-flex;
+    margin: 4px;
+    color: rgba(0, 0, 0, .87);
+    align-items: center;
+    height: 32px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.chip .icon {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .54);
+    width: 20px;
+    text-align: center;
+}
+
+.chip .icon--leadind {
+    margin: 2px 4px 0 -4px;
+}
+
+.chip .icon--trailing {
+    margin: 2px -4px 0 4px;
+}
+
+.chips__choice .chip.chip--active {
+    color: #eee;
+}
+
+.chips__filter .chip .chip--check {
+    display: none;
+}
+
+.chips__filter .chip.chip--active .chip--check {
+    display: block;
+}
