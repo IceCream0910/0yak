@@ -5,11 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0YAK - 2022 대선 후보 공약 정리</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <title>0YAK - 주요 이슈</title>
+    <meta property="og:title" content="0YAK - 2022 대선 후보 공약 정리">
+    <meta property="og:site_name" content="0YAK">
+    <meta property="og:url" content="0yak.vercel.app">
+    <meta property="og:description" content="2022 대선 후보자들의 공약부터 주요 이슈까지 한번에 확인해보세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/x3SRzxt.png">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Korean">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="assets/css/common.css">
-
+    <link rel="stylesheet" href="assets/css/compare.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -32,8 +42,134 @@
 
 
 
+    <div class="content" style="padding:20px;width:100%;display:flex;">
+
+
+        <div class="selector-container">
+            <h1>Q.</h1>
+            <div class="selector-container-slider">
+                <h1 class="selector-h1 active" id="current-category">TV 토론회</h1>
+                <h1 class="selector-h1">공매도</h1>
+                <h1 class="selector-h1">박근혜 특별사면</h1>
+                <h1 class="selector-h1">소상공인 손실보상</h1>
+                <h1 class="selector-h1">n번방 방지법</h1>
+                <h1 class="selector-h1">종전선언</h1>
+                <h1 class="selector-h1">부동산 세제</h1>
+                <h1 class="selector-h1">주택 공급</h1>
+                <h1 class="selector-h1">임대차 3법</h1>
+                <h1 class="selector-h1">탈원전</h1>
+                <h1 class="selector-h1">외교 기조</h1>
+                <h1 class="selector-h1">북핵 문제</h1>
+                <h1 class="selector-h1">모병제</h1>
+                <h1 class="selector-h1">일ㆍ양육 양립</h1>
+                <h1 class="selector-h1">남녀 임금 격차</h1>
+                <h1 class="selector-h1">여성가족부 존폐</h1>
+                <h1 class="selector-h1">성범죄 방지</h1>
+            </div>
+        </div>
+
+        <div class="category-container" id="compare-content" style="padding-bottom:200px;">
+            <div class="chips__choice" id="chip-mobile">
+                <div class="chip chip--active">TV 토론회</div>
+                <div class="chip">공매도</div>
+                <div class="chip">박근혜 특별사면</div>
+                <div class="chip">소상공인 손실보상</div>
+                <div class="chip">n번방 방지법</div>
+                <div class="chip">종전선언</div>
+                <div class="chip">부동산 세제</div>
+                <div class="chip">주택 공급</div>
+                <div class="chip">임대차 3법</div>
+                <div class="chip">탈원전</div>
+                <div class="chip">외교 기조</div>
+                <div class="chip">북핵 문제</div>
+                <div class="chip">모병제</div>
+                <div class="chip">일ㆍ양육 양립</div>
+                <div class="chip">남녀 임금 격차</div>
+                <div class="chip">여성가족부 존폐</div>
+                <div class="chip">성범죄 방지</div>
+            </div>
+            <div class="compare-box minjoo">
+                <div class="profile-box">
+                    <div class="lee_img"></div>
+                    <h5>이재명</h5>
+                </div>
+                <p class="message" id="lee-msg"></p>
+            </div>
+            <div class="compare-box peoplepower">
+                <div class="profile-box">
+                    <div class="yun_img"></div>
+                    <h5>윤석열</h5>
+                </div>
+                <p class="message" id="yun-msg">
+            </div>
+
+            <div class="compare-box justice">
+                <div class="profile-box">
+                    <div class="sim_img"></div>
+                    <h5>심상정</h5>
+                </div>
+                <p class="message" id="sim-msg"></p>
+            </div>
+            <div class="compare-box people">
+                <div class="profile-box">
+                    <div class="ahn_img"></div>
+                    <h5>안철수</h5>
+                </div>
+                <p class="message" id="ahn-msg"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="expand-btn-pm footer" href="javascript:window.open('https://forms.gle/rxmc8xsb1efZYScf9', '_blank');">
+        <ion-icon name="alert-outline" style="font-size:20px;position:relative;top:4px;"></ion-icon> 추가/수정 요청
+    </a>
+    <style>
+        .expand-btn-pm {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            border-radius: 25px;
+            padding: 10px 20px;
+            background: #fff;
+            box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .expand-btn-pm:hover {
+            color: var(--party-color);
+            background: rgb(235, 235, 235);
+        }
+    </style>
+
 </body>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/issue.js"></script>
+<style>
+    .chip {
+        min-width: 140px;
+    }
+    
+    .compare-box {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .compare-box.minjoo {
+        background-color: rgba(10, 82, 156, 0.1);
+    }
+    
+    .compare-box.peoplepower {
+        background-color: rgba(230, 30, 43, 0.1);
+    }
+    
+    .compare-box.justice {
+        background-color: rgba(255, 217, 0, 0.1);
+    }
+    
+    .compare-box.people {
+        background-color: rgba(255, 115, 40, 0.1);
+    }
+</style>
 
 </html>

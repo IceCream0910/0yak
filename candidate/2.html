@@ -74,7 +74,7 @@
             <td width="1em" </td>
                 <td>
 
-                    69억 978만원<br>(2021 고위공직자 재산 정보 공개)</td>
+                    74억 4534만원</td>
         </tr>
     </tbody>
 
@@ -119,61 +119,52 @@
         건강남성노후농수산반려동물부동산산업생활편의세금안전여성육아정의지역균형청년취업노동투자학업환경휴식
     -->
     <div class="chips__choice">
-        <div class="chip chip--active" onclick="showAll();window.history.replaceState(null, null, '?num='+candidateNum+'&category='+'all');">전체</div>
-        0
-        <div class="chip">일자리/복지</div>
-        1
+        <!--<div class="chip chip--active" onclick="showAll();window.history.replaceState(null, null, '?num='+candidateNum+'&category='+'all');">전체</div>-->
+        <div class="chip chip--active">일자리/복지</div>
         <div class="chip">정치/경제</div>
         <!--정치혁신,가상자산,플랫폼-->
-        2
         <div class="chip">부동산</div>
-        3
+
         <div class="chip">교통</div>
-        4
         <div class="chip">사회/안전</div>
         <!--안전,코로나,농업,스포츠,통상,해양/수산-->
-        5
         <div class="chip">외교/안보</div>
         <!--통상,해병대,치안-->
-        6
         <div class="chip">환경/에너지</div>
         <!--에너지,전력,산림-->
-        7
         <div class="chip">디지털</div>
         <!--게임-->
-        8
-        <div class="chip">지역균형</div>
+        <div class="chip">지역</div>
         <!--지역-->
-        9
         <div class="chip">사법</div>
-        10
         <div class="chip">육아</div>
-        11
         <div class="chip">아동/청소년</div>
-        12
         <div class="chip">반려동물</div>
-        13
         <div class="chip">치안</div>
-        14
         <div class="chip">여성</div>
-        15
         <div class="chip">청년</div>
-        16
         <div class="chip">노인</div>
-        17
         <div class="chip">장애인</div>
     </div>
-    <!--디지털 플랫폼 정부부터 해야됨-->
 
     <div id="promises-container">
     </div>
+
+    <a class="expand-btn" href="javascript:window.open('https://www.wikiyoon.com/', '_blank');">
+        <ion-icon name="add-outline" style="font-size:20px;position:relative;top:4px;"></ion-icon>
+        석열씨의 심쿵약속 & 생활공약 </a>
+    <br><br>
+    <span style="font-size:12px;color:rgb(99, 99, 99);">* 석열씨의 심쿵약속 & 생활공약은 상단 리스트에 미포함되어 있습니다.<br><br>
+        공약 참고 : <a href="https://www.wikiyoon.com/" target="_blank">위키윤</a></span>
+    </span>
+
 </div>
 <script>
-    showAll();
+    //showAll();
     $(function() {
         $('.chips__choice .chip').on("click", function() {
             moveTo('all-promise');
-            if ($(this).index() != 0) updatePromise($(this).index());
+            updatePromise($(this).index());
             $('.chips__choice .chip').removeClass('chip--active');
             $(this).addClass("chip--active");
         });

@@ -14,15 +14,15 @@ window.onload = function(){
     if(getParameterByName('category') != 'all') {
       currentCategory=Number(getParameterByName('category'));
       $('.chips__choice .chip').removeClass('chip--active');
-      var ele = $('.chips__choice .chip')[currentCategory+1];
+      var ele = $('.chips__choice .chip')[currentCategory];
       $(ele).addClass('chip--active');
-      updatePromise(currentCategory+1);
     } else {
-      currentCategory ='all';
+      currentCategory = 0;
     }
   } else {
-    currentCategory ='all';
+    currentCategory = 0;
   }
+  updatePromise(currentCategory)
 }
 
 
@@ -49,6 +49,7 @@ switch(candidateNum) {
         break;
 }
 
+document.title = "0YAK - 후보별 공약 : "+candidateName;
 $.get('candidate/'+candidateNum+'.html', function(data) {
     $('.content').html(data);
 
@@ -128,7 +129,6 @@ function toggleTable() {
 
 //선택한 카테고리에 따라 공약 표시
 function updatePromise(index) {
-  index--;
   window.history.replaceState(null, null, "?num="+candidateNum+"&category="+index);
 
   $.get('candidate/promises/'+candidateNum+'.json', function(data) {

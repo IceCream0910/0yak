@@ -1,0 +1,192 @@
+        html,
+        body {
+            overflow: hidden;
+        }
+        
+        .compare-box {
+            margin-top: 20px;
+            height: auto;
+            width: 100%;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            vertical-align: middle;
+        }
+        
+        .selector-container {
+            width: 15%;
+            display: block;
+            line-height: 0.8;
+            overflow-y: hidden;
+        }
+        
+        .selector-container-slider {
+            height: 90vh;
+            overflow-y: scroll;
+            -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            padding-bottom: 500px;
+        }
+        
+        .selector-container h1 {
+            line-height: 1.4;
+        }
+        
+        .category-container {
+            max-height: 90vh;
+            overflow-y: scroll;
+            width: 85%;
+            padding-right: 50px;
+            padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        
+        #chip-mobile {
+            display: none;
+        }
+        
+        @media (max-width: 767px) {
+            html,
+            body {
+                overflow-y: scroll;
+            }
+            .category-container {
+                width: 100%;
+                max-height: none;
+                padding-right: 0;
+                padding-left: 0;
+                overflow: scroll;
+            }
+            .selector-container {
+                display: none;
+            }
+            #chip-mobile {
+                display: inline-flex;
+                overflow: scroll;
+            }
+        }
+        
+        .message {
+            float: right;
+            text-align: right;
+            margin-left: 20px;
+            max-width: 75%;
+            word-break: break-all;
+            margin-top: 0px;
+            color: rgb(80, 80, 80);
+        }
+        
+        .profile-box {
+            float: left;
+            width: 50px;
+            line-height: 0;
+            text-align: center;
+        }
+        
+        .lee_img {
+            background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_leejm_mo.jpg');
+            border-radius: 50%;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+        
+        .yun_img {
+            background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_yoonsy_mo.jpg');
+            border-radius: 50%;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+        
+        .sim_img {
+            background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_simsj_mo.jpg');
+            border-radius: 50%;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+        
+        .ahn_img {
+            background-image: url('https://img.joongang.co.kr/pubimg/project/election2022/candidate_showcase_ancs_mo.jpg');
+            border-radius: 50%;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+        
+        .selector-h1 {
+            color: rgb(136, 136, 136);
+            width: auto;
+        }
+        
+        .selector-h1:hover {
+            color: rgb(110, 110, 110);
+        }
+        
+        .selector-h1.active {
+            color: rgb(140, 79, 255);
+            border-bottom: rgb(140, 79, 255) 7px solid;
+            padding-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .selector-h1.active:hover {
+            color: rgb(140, 79, 255);
+        }
+        
+        .chip {
+            padding: 0 12px;
+            background-color: rgb(201, 201, 201);
+            border-radius: 100px;
+            display: inline-flex;
+            margin: 4px;
+            color: rgba(0, 0, 0, .87);
+            align-items: center;
+            min-height: 32px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            min-width: 90px;
+        }
+        
+        .chips__choice .chip.chip--active {
+            color: #fff;
+            background-color: rgb(140, 79, 255);
+        }
+        
+        .chip .icon {
+            font-size: 16px;
+            color: rgba(0, 0, 0, .54);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .chip .icon--leadind {
+            margin: 2px 4px 0 -4px;
+        }
+        
+        .chip .icon--trailing {
+            margin: 2px -4px 0 4px;
+        }
+        
+        .chips__choice .chip.chip--active {
+            color: #eee;
+        }
+        
+        .chips__filter .chip .chip--check {
+            display: none;
+        }
+        
+        .chips__filter .chip.chip--active .chip--check {
+            display: block;
+        }

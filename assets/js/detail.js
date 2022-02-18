@@ -35,8 +35,10 @@ document.documentElement.style.setProperty('--party-color', candidateColor);
 $('#candidate-number').html(candidateNum);
 $('#candidate-name').html(candidateName);
 
+
 $.get('candidate/promises/'+candidateNum+'.json', function(data) {
     var promise = data[promiseCategory][promiseIndex];
+    document.title = "0YAK - "+candidateName+" 공약 : "+promise.title;
     $('#promise-title').html(promise.title);
     $('#promise-content').html(promise.content);
     $('#promise-image').attr('src', promise.image);

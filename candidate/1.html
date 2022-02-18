@@ -66,7 +66,7 @@
             <td>재산</td>
             <td width="1em" </td>
                 <td>
-                    28억 6437만원<br>(2021 고위공직자 재산 정보 공개)</td>
+                    32억 1716만원</td>
         </tr>
     </tbody>
 
@@ -111,8 +111,7 @@
         건강남성노후농수산반려동물부동산산업생활편의세금안전여성육아정의지역균형청년취업노동투자학업환경휴식
     -->
     <div class="chips__choice">
-        <div class="chip chip--active" onclick="showAll();window.history.replaceState(null, null, '?num='+candidateNum+'&category='+'all');">전체</div>
-        <div class="chip">건강</div>
+        <div class="chip chip--active">건강</div>
         <div class="chip">남성</div>
         <div class="chip">노후</div>
         <div class="chip">농수산</div>
@@ -137,13 +136,22 @@
 
     <div id="promises-container">
     </div>
+
+    <a class="expand-btn" href="javascript:window.open('https://theminjoo.kr/board/lists/electionpromises', '_blank');">
+        <ion-icon name="add-outline" style="font-size:20px;position:relative;top:4px;"></ion-icon>
+        위에는 없는 최신 공약도 살펴보기</a>
+    <br><br>
+    <span style="font-size:12px;color:rgb(99, 99, 99);">
+        * 각 카드를 클릭하시면 하위 세부 공약을 확인하실 수 있습니다(국민의힘 윤석열 후보 페이지의 경우 하위 공약 분할)<br>
+        * 일부 소확행 공약은 상단 리스트에 미포함되어 있습니다.<br><br>
+    공약 참고 : <a href="https://gongyak.kr/" target="_blank">공약 한판 정리</a>, <a href="https://theminjoo.kr/board/lists/electionpromises/" target="_blank">더불어민주당 공식 홈페이지</a></span>
+
 </div>
 <script>
-    showAll();
     $(function() {
         $('.chips__choice .chip').on("click", function() {
             moveTo('all-promise');
-            if ($(this).index() != 0) updatePromise($(this).index());
+            updatePromise($(this).index());
             $('.chips__choice .chip').removeClass('chip--active');
             $(this).addClass("chip--active");
         });

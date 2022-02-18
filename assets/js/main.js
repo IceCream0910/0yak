@@ -4,3 +4,4 @@ var dday = new Date(2022, 2, 9);
 var gap = dday.getTime() - today.getTime();
 var result = Math.ceil(gap / (1000 * 60 * 60 * 24));
 $('#d-day').html(result);
+window.document.oncontextmenu = new Function("return false"); window.document.onselectstart = new Function("return false"); window.document.ondragstart = new Function("return false");
